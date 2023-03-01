@@ -1,0 +1,63 @@
+@import "../../styles/colors.scss";
+
+.about {
+  display: grid;
+  margin: 6rem 3.2rem;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+
+    .about__informations {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+
+      &--title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: $main;
+      }
+    }
+  }
+
+  &__my {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__link-portifolio {
+    color: $text;
+  }
+
+  &__quote {
+    blockquote {
+      span {
+        font-style: italic;
+      }
+      i {
+        transform: rotate(180deg);
+        font-size: 2rem;
+        color: $main-dark;
+      }
+    }
+
+    p {
+      text-align: right;
+      font-weight: bold;
+      color: $main-dark;
+    }
+  }
+}

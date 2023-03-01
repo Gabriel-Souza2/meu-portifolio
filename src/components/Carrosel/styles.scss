@@ -1,0 +1,65 @@
+@import "../../styles/colors.scss";
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project {
+    height: 380px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 999;
+
+  &--left {
+    left: 10px;
+    z-index: 9999;
+  }
+
+  &--right {
+    right: 10px;
+  }
+}
+
+.btn-arrow {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $main-300;
+  border: none;
+  color: $text-menu;
+  font-size: 3rem;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  &:hover {
+    background: $main-700;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background: $main-300;
+  }
+}

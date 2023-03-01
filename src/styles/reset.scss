@@ -1,0 +1,45 @@
+@import "colors.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2 {
+  color: $text;
+  letter-spacing: -1px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: none;
+}

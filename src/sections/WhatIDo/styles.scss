@@ -1,0 +1,15 @@
+.what-i-do {
+  margin: 0rem 0 26rem;
+  position: relative;
+
+  &__cards {
+    &:nth-child(5) {
+      margin-top: 40% !important;
+    }
+  }
+
+  &__card--middle {
+    position: relative;
+    top: 200px;
+  }
+}

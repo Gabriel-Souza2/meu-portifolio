@@ -1,0 +1,101 @@
+@import "../../styles/colors.scss";
+
+.cards {
+  display: grid;
+  grid-template-rows: 130px auto auto auto;
+  grid-template-columns: repeat(3, auto);
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+
+  margin-top: 142px;
+
+  height: 100%;
+  .card__header,
+  .card__title,
+  .card__content,
+  .card__footer {
+    width: 342px;
+
+    text-align: center;
+    z-index: 999;
+  }
+
+  .card__header {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0px 10px 0px 0px #ffffff, 0px 0px 8px 0px $shadow;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .card__title {
+    padding-bottom: 1rem;
+    position: relative;
+
+    box-shadow: 0px -10px 0px 0px #ffffff, 0px 10px 0px 0px #ffffff,
+      0px 0px 8px 0px $shadow;
+  }
+
+  .card__content {
+    position: relative;
+    padding: 1.6rem;
+    box-shadow: 0px -10px 0px 0px white, 0px 10px 0px 0px white,
+      0px 0px 8px 0px $shadow;
+    height: 100%;
+
+    font-weight: 500;
+  }
+
+  .card__footer {
+    position: relative;
+    padding: 1.6rem;
+    box-shadow: 0px -10px 0px 0px white, 0px 0px 8px 0px $shadow;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .middle {
+    position: relative;
+    top: 200px;
+  }
+
+  .blob {
+    margin-top: -110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+
+    &--1 {
+      background: url("../../assets/vector-1.png") no-repeat center;
+    }
+
+    &--2 {
+      background: url("../../assets/vector-1.png") no-repeat center;
+    }
+
+    &--3 {
+      background: url("../../assets/vector-3.png") no-repeat center;
+    }
+
+    &--4 {
+      background: url("../../assets/vector-4.png") no-repeat center;
+    }
+
+    &--5 {
+      background: url("../../assets/vector-5.png") no-repeat center;
+    }
+
+    &--6 {
+      background: url("../../assets/vector-6.png") no-repeat center;
+    }
+  }
+}
