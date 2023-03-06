@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles.scss";
 
 export function Menu() {
@@ -6,6 +6,25 @@ export function Menu() {
   function handleHamburgerMenu() {
     setActiveMenu((state) => !state);
   }
+
+  const menuItens = [
+    {
+      name: "Inicio",
+      link: "#header",
+    },
+    {
+      name: "O que eu faço?",
+      link: "#what-i-do",
+    },
+    {
+      name: "Portfólio",
+      link: "#portifolio",
+    },
+    {
+      name: "Contatos",
+      link: "#contact",
+    },
+  ];
 
   const menuIsActive = activeMenu ? "active" : "";
   return (
@@ -20,18 +39,14 @@ export function Menu() {
           <span className="line"></span>
           <span className="line"></span>
         </button>
-        <li className="menu__item">
-          <a href="#header">Inicio</a>
-        </li>
-        <li className="menu__item">
-          <a href="#what-i-do">O que eu faço?</a>
-        </li>
-        <li className="menu__item">
-          <a href="#portifolio">Portfólio</a>
-        </li>
-        <li className="menu__item">
-          <a href="#contact">Contatos</a>
-        </li>
+
+        {menuItens.map((item, index) => (
+          <li className="menu__item" key={index}>
+            <a href={item.link} onClick={handleHamburgerMenu}>
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className="menu__overlay" onClick={handleHamburgerMenu}></div>
     </nav>

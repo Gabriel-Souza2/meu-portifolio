@@ -21,6 +21,7 @@
     font-weight: bold;
     margin: 0 3.5rem;
     position: relative;
+    height: 3.5rem;
 
     & a::after {
       content: " ";
@@ -29,7 +30,7 @@
       width: 0%;
       display: inline-block;
       position: absolute;
-      bottom: -10px;
+      bottom: 0px;
       left: 0;
       border-radius: 999px;
 
@@ -53,7 +54,7 @@
 .hamburger-menu {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: 10px;
   width: 3.5rem;
   height: 3rem;
@@ -73,7 +74,7 @@
 
 .close-menu {
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 10px;
   width: 3.5rem;
   height: 3rem;
@@ -85,10 +86,12 @@
 
   & span:nth-child(1) {
     transform: rotate(45deg) translateX(8px);
+    animation: closeButtonPositive 0.8s linear;
   }
 
   & span:nth-child(2) {
     transform: rotate(-45deg) translateX(8px);
+    animation: closeButtonNegative 0.8s linear;
   }
 }
 
@@ -109,8 +112,8 @@
       top: 0;
       z-index: 99999;
       background-color: $main;
-      margin: 0;
-      transition: all 1s ease-in;
+      margin-right: 0;
+      animation: hamburger 1s linear;
 
       &.active {
         display: flex;
@@ -128,5 +131,34 @@
 
   .hamburger-menu {
     display: block;
+  }
+}
+
+@keyframes hamburger {
+  0% {
+    margin-right: -450px;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
+
+@keyframes closeButtonPositive {
+  0% {
+    transform: rotate(0deg) translateX(8px);
+  }
+
+  100% {
+    transform: rotate(45deg) translateX(8px);
+  }
+}
+
+@keyframes closeButtonNegative {
+  0% {
+    transform: rotate(0deg) translateX(8px);
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(8px);
   }
 }
