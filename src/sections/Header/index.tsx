@@ -1,17 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { SocialButtons } from "../../components/SocialButtons";
 
 import "./styles.scss";
 import BigHeadAvatar from "../../assets/bighead_avatar.svg";
+import { Menu } from "../../components/Menu";
 
 export function Header() {
+  const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
-    const animations = document.querySelectorAll("[data-anime]");
-
-    animations.forEach((element) => {
-      element.classList.add("animate");
-    });
+    setStartAnimation(true);
   }, []);
+
+  const animation = startAnimation ? "animate" : "";
 
   return (
     <header id="header" className="header">
@@ -19,26 +19,12 @@ export function Header() {
         <div></div>
       </div>
 
-      <nav className="menu">
-        <ul>
-          <li className="menu__item">
-            <a href="#header">Inicio</a>
-          </li>
-          <li className="menu__item">
-            <a href="#what-i-do">O que eu faço?</a>
-          </li>
-          <li className="menu__item">
-            <a href="#portifolio">Portfólio</a>
-          </li>
-          <li className="menu__item">
-            <a href="#contact">Contatos</a>
-          </li>
-        </ul>
-      </nav>
-      <div className="avatar" data-anime="scale">
+      <Menu />
+
+      <div className={`avatar ${animation}`} data-anime="scale">
         <img src={BigHeadAvatar} alt="" />
       </div>
-      <div className="titles" data-anime="top">
+      <div className={`titles ${animation}`} data-anime="top">
         <h1 className="titles--main">Gabriel de Souza Gomes</h1>
         <h2 className="titles--subtitle">
           Desenvolvendo aplicações modernas para pessoas modernas.

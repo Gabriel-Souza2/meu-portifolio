@@ -130,3 +130,10 @@
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
+@media (max-width: 1024px) {
+  .contact__form form {
+    display: flex;
+    flex-direction: column;
+  }
+}

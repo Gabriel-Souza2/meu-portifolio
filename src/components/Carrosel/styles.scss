@@ -8,13 +8,54 @@ ul {
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
+  gap: 2rem;
+  padding: 0 1rem;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
   .project {
+    width: 43rem;
     height: 380px;
+    flex: none;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+
+    img {
+      height: 100%;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9;
+
+      color: $text-menu;
+      text-align: center;
+
+      display: flex;
+      place-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1.6rem;
+
+      h3 {
+        font-size: 2.4rem;
+
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
   }
 }
 

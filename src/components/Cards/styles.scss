@@ -99,3 +99,22 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    .card__header:nth-child(5) {
+      margin-top: 150px !important;
+    }
+
+    .card__footer:nth-child(8) {
+      margin-bottom: 150px;
+    }
+
+    .middle {
+      position: relative;
+      top: 0;
+    }
+  }
+}
