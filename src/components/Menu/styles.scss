@@ -100,7 +100,7 @@
     ul {
       display: none;
 
-      width: 90vh;
+      width: 50vw;
       height: 100vh;
       flex-direction: column;
       justify-content: center;
@@ -131,6 +131,18 @@
 
   .hamburger-menu {
     display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    ul {
+      position: fixed;
+      inset: 0;
+      animation: none;
+      width: 100vw;
+      height: 100vh;
+    }
   }
 }
 

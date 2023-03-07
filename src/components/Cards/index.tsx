@@ -28,13 +28,10 @@ export function Cards({ data }: CardsProps) {
               <div className={`blob blob--${card.blob}`}>
                 <img src={card.icon} />
               </div>
+              <h3 key={`title-${card.blob}`} className="card__title">
+                {card.title}
+              </h3>
             </div>
-            <h3
-              key={`title-${card.blob}`}
-              className={`card__title ${card.middle === true ? "middle" : ""}`}
-            >
-              {card.title}
-            </h3>
 
             <div
               key={`content-${card.blob}`}

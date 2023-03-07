@@ -2,8 +2,8 @@
 
 .contact__form {
   margin-top: 6.4rem;
-  padding: 0 13rem;
   position: relative;
+  padding: 0 2rem;
 
   form {
     display: grid;
@@ -135,5 +135,11 @@
   .contact__form form {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact__form {
+    padding: 0 4rem;
   }
 }

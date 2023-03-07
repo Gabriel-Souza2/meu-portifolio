@@ -10,10 +10,10 @@ export function Contact() {
         <img src="./eu.jpeg" />
       </div>
 
-      <div className="contact__titles">
-        <h1 className="contact__titles--main">Gabriel de Souza Gomes</h1>
+      <div className="titles contact__titles">
+        <h1 className="titles--main">Gabriel de Souza Gomes</h1>
 
-        <h3 className="contact__titles--thirdtitle">
+        <h3 className="titles--thirdtitle">
           Desenvolvedor Web . Design UI/UX . Freelancer
         </h3>
       </div>

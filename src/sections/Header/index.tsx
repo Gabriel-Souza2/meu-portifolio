@@ -24,7 +24,7 @@ export function Header() {
       <div className={`avatar ${animation}`} data-anime="scale">
         <img src={BigHeadAvatar} alt="" />
       </div>
-      <div className={`titles ${animation}`} data-anime="top">
+      <div className={`titles header__titles ${animation}`} data-anime="top">
         <h1 className="titles--main">Gabriel de Souza Gomes</h1>
         <h2 className="titles--subtitle">
           Desenvolvendo aplicações modernas para pessoas modernas.

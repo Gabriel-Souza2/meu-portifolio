@@ -1,18 +1,9 @@
-import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowLeft, ArrowRight } from "phosphor-react";
 import { useRef, useState } from "react";
-import { Button } from "../Button";
-import { Modal } from "../Modal";
 
 import "./styles.scss";
 
 export function Carrosel() {
-  const [isDisabledButtonArrowLeft, setIsDisabledButtonArrowLeft] =
-    useState(false);
-
-  const [isDisabledButtonArrowRight, setIsDisabledButtonArrowRight] =
-    useState(false);
-
   const carrosel = useRef<HTMLUListElement>({} as HTMLUListElement);
 
   const size = 450;
@@ -55,11 +46,7 @@ export function Carrosel() {
 
   return (
     <>
-      <button
-        onClick={handlePrevious}
-        className="btn-arrow arrow arrow--left js-btn-arrow-left"
-        disabled={isDisabledButtonArrowLeft}
-      >
+      <button onClick={handlePrevious} className="btn-arrow arrow arrow--left">
         <ArrowLeft size={32} weight="bold" />
       </button>
 
@@ -71,12 +58,8 @@ export function Carrosel() {
               <div className="overlay">
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
-                <Dialog.Root>
-                  <Dialog.Trigger asChild>
-                    <button className="btn-action">Ver mais</button>
-                  </Dialog.Trigger>
-                  <Modal />
-                </Dialog.Root>
+
+                <button className="btn-action">Ver mais</button>
               </div>
             </li>
           );
@@ -86,7 +69,6 @@ export function Carrosel() {
       <button
         className="btn-arrow arrow arrow--right js-btn-arrow-right"
         onClick={handleNext}
-        disabled={isDisabledButtonArrowRight}
       >
         <ArrowRight size={32} weight="bold" />
       </button>
