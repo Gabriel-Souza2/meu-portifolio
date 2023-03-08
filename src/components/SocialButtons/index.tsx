@@ -1,8 +1,22 @@
+import { motion, useAnimation } from "framer-motion";
+
 import "./styles.scss";
 
 export function SocialButtons() {
   return (
-    <div className="social__buttons" data-anime="right">
+    <motion.div
+      animate={{
+        x: 0,
+      }}
+      initial={{
+        x: 200,
+      }}
+      transition={{
+        duration: 1,
+        delay: 0.5,
+      }}
+      className="social__buttons"
+    >
       <a
         target="_blank"
         className="social__buttons__icon"
@@ -24,6 +38,6 @@ export function SocialButtons() {
       >
         <img src="/linkedin.png" />
       </a>
-    </div>
+    </motion.div>
   );
 }

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import { SocialButtons } from "../../components/SocialButtons";
 
 import "./styles.scss";
@@ -6,13 +7,6 @@ import BigHeadAvatar from "../../assets/bighead_avatar.svg";
 import { Menu } from "../../components/Menu";
 
 export function Header() {
-  const [startAnimation, setStartAnimation] = useState(false);
-  useEffect(() => {
-    setStartAnimation(true);
-  }, []);
-
-  const animation = startAnimation ? "animate" : "";
-
   return (
     <header id="header" className="header">
       <div className="overlay">
@@ -21,10 +15,34 @@ export function Header() {
 
       <Menu />
 
-      <div className={`avatar ${animation}`} data-anime="scale">
+      <motion.div
+        className="avatar"
+        animate={{
+          scale: 1,
+        }}
+        initial={{
+          scale: 0,
+        }}
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+        }}
+      >
         <img src={BigHeadAvatar} alt="" />
-      </div>
-      <div className={`titles header__titles ${animation}`} data-anime="top">
+      </motion.div>
+      <motion.div
+        className="titles header__titles"
+        animate={{
+          y: 0,
+        }}
+        initial={{
+          y: 100,
+        }}
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+        }}
+      >
         <h1 className="titles--main">Gabriel de Souza Gomes</h1>
         <h2 className="titles--subtitle">
           Desenvolvendo aplicações modernas para pessoas modernas.
@@ -32,7 +50,7 @@ export function Header() {
         <h3 className="titles--thirdtitle">
           Desenvolvedor Web . Design UI/UX . Freelancer
         </h3>
-      </div>
+      </motion.div>
       <div className="social">
         <SocialButtons />
       </div>
