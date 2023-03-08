@@ -10,6 +10,7 @@
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 1rem;
     transition: all 0.5s linear;
     cursor: grab;
@@ -17,7 +18,7 @@
     &__item {
       height: 100%;
       position: relative;
-      margin-right: 1.6rem;
+      margin-right: 2rem;
 
       .linguages-wrapper {
         display: flex;
