@@ -64,7 +64,6 @@ export function Skills() {
             <motion.div key={index} className="skills__list-linguages__item">
               <motion.div className="linguages-wrapper">
                 <img src={lingague.image} />
-                <div className="tooltip">{lingague.name}</div>
               </motion.div>
             </motion.div>
           );
