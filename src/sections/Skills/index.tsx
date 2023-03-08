@@ -54,12 +54,11 @@ export function Skills() {
     <section id="skills" className="skills">
       <h2 className="sections-title">Minhas skills</h2>
 
-      <motion.div className="skills__list">
+      <motion.div className="skills__list" ref={skills}>
         <motion.div
           className="skills__list__inner"
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
-          ref={skills}
         >
           {myLinguages.map((lingague, index) => {
             return (
