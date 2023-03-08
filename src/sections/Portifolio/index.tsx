@@ -1,4 +1,4 @@
-import { Carrosel } from "../../components/Carrosel";
+import { Carosel } from "../../components/Carousel";
 import "./styles.scss";
 
 export function Portifolio() {
@@ -8,7 +8,7 @@ export function Portifolio() {
         <h2 className="sections-title">Portifólio</h2>
       </div>
       <div className="container">
-        <Carrosel />
+        <Carosel />
       </div>
       <div className="icon icon--1"></div>
       <div className="icon icon--2"></div>

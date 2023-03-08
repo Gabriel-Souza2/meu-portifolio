@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Spotify Clone",
+      "description": "Clone da pagina do spotify",
+      "main_image": "./spotify_1.png"
+    },
+
+    {
+      "name": "Formularios de Stickers",
+      "description": "Desafio proposto para concorrer a uma vaga no Vagas.com",
+      "main_image": "./form_stickers.png"
+    },
+    {
+      "name": "Twitter Clone",
+      "description": "Clone do Twitter",
+      "main_image": "./twitter.png"
+    },
+    {
+      "name": "DT Money",
+      "description": "Controle de gastos",
+      "main_image": "./dt_money.png"
+    }
+  ]
+}

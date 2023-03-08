@@ -5,18 +5,19 @@
   position: relative;
   overflow: hidden;
 
-  ul {
+  .skills__list-linguages {
     height: 14rem;
     list-style: none;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
     transition: all 0.5s linear;
-    justify-content: space-between;
+    cursor: grab;
 
-    li {
+    &__item {
       height: 100%;
       position: relative;
+      margin-right: 1.6rem;
 
       .linguages-wrapper {
         display: flex;
