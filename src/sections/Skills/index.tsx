@@ -8,7 +8,11 @@ export function Skills() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    setWidth(skills.current?.scrollWidth - skills.current?.offsetWidth);
+    if (window.innerWidth < 1010) {
+      setWidth((80 + 30) * myLinguages.length - skills.current?.scrollWidth);
+    } else {
+      setWidth(skills.current?.scrollWidth - skills.current?.offsetWidth);
+    }
   }, []);
 
   const myLinguages = [
@@ -51,14 +55,14 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="skills">
+    <motion.section id="skills" className="skills">
       <h2 className="sections-title">Minhas skills</h2>
 
       <motion.div className="skills__list" ref={skills}>
         <motion.div
           className="skills__list__inner"
           drag="x"
-          dragConstraints={{ right: 0, left: -width }}
+          dragConstraints={{ right: 0, left: width }}
         >
           {myLinguages.map((lingague, index) => {
             return (
@@ -69,6 +73,6 @@ export function Skills() {
           })}
         </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

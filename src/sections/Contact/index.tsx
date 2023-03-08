@@ -1,3 +1,4 @@
+import { Contacts } from "../../components/Contacts";
 import { Form } from "../../components/Form";
 import "./styles.scss";
 
@@ -24,16 +25,7 @@ export function Contact() {
       <p className="contact__message">
         Ou entre em contato direto pelo whatsapp ou email!
       </p>
-      <div className="contact__info-wrapper">
-        <a href="#" className="info">
-          <img src="./whatsapp.png" />
-          <span>(11) 94514-6976</span>
-        </a>
-        <a href="#" className="info">
-          <img src="./mail.png" />
-          <span>gabriel.souza2@hotmail.com.br</span>
-        </a>
-      </div>
+      <Contacts />
       <div className="contact__social">
         <h3>Redes Sociais</h3>
         <div className="contact__social__links">

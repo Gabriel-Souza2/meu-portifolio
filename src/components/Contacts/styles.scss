@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3.2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  color: $text;
+  margin-right: 5px;
+  flex-direction: column;
+  width: 100%;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+button.info {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.TooltipContent {
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 15px;
+  line-height: 1;
+  color: $text-menu;
+  background-color: black;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  user-select: none;
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+@media screen and (max-width: 425px) {
+  .contacts {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
