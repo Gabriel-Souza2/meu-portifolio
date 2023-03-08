@@ -44,10 +44,6 @@ export function Skills() {
       name: "WordPress",
       image: "/wordpress.png",
     },
-    {
-      name: "Figma",
-      image: "/figma.png",
-    },
   ];
 
   return (
