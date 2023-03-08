@@ -5,17 +5,18 @@
   position: relative;
 
   .skills__list {
-    cursor: grab;
     overflow: hidden;
 
     &__inner {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 1.6rem;
     }
   }
 
   &__item {
-    margin-right: 3rem;
+    margin-right: 2rem;
 
     img {
       pointer-events: none;

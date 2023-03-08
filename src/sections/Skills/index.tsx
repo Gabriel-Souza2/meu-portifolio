@@ -1,20 +1,8 @@
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import "./styles.scss";
 
 export function Skills() {
-  const skills = useRef<HTMLDivElement>({} as HTMLDivElement);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    if (window.innerWidth < 1010) {
-      setWidth((80 + 30) * myLinguages.length - skills.current?.scrollWidth);
-    } else {
-      setWidth(skills.current?.scrollWidth - skills.current?.offsetWidth);
-    }
-  }, []);
-
   const myLinguages = [
     {
       name: "HTML",
@@ -55,24 +43,20 @@ export function Skills() {
   ];
 
   return (
-    <motion.section id="skills" className="skills">
+    <section id="skills" className="skills">
       <h2 className="sections-title">Minhas skills</h2>
 
-      <motion.div className="skills__list" ref={skills}>
-        <motion.div
-          className="skills__list__inner"
-          drag="x"
-          dragConstraints={{ right: 0, left: width }}
-        >
+      <div className="skills__list">
+        <div className="skills__list__inner">
           {myLinguages.map((lingague, index) => {
             return (
-              <motion.div key={index} className="skills__item">
+              <div key={index} className="skills__item">
                 <img src={lingague.image} />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
   );
 }
