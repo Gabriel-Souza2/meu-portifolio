@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import "./styles.scss";
+import { Modal } from "../Modal";
 
 const schema = yup
   .object({
@@ -38,23 +39,49 @@ export function Form() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
 
   const [activeLoadingButton, setActiveLoadingButton] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [message, setMessage] = useState(
+    "Seu formulario foi enviado com sucesso!"
+  );
+  const [formSuccess, setFormSuccess] = useState(true);
 
   const buttonLoadingActive = activeLoadingButton ? "active" : "";
 
   function onSubmit(data: FormData) {
     setActiveLoadingButton(true);
-    console.log(data);
+
+    fetch("https://formsubmit.co/ajax/gabrielsouzadev@outlook.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        setModal(true);
+        setActiveLoadingButton(false);
+        reset();
+      })
+      .catch((error) => {
+        setMessage(
+          "Não foi possivel enviar o formulario! Tente novamente mais tarde!"
+        );
+        setFormSuccess(false);
+      });
   }
 
   return (
     <div id="contact-form" className="contact__form">
-      <form id="form" action="POST" onSubmit={handleSubmit(onSubmit)}>
+      <form id="form" method="POST" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">
           <span className="contact__form__input-name">Nome(*):</span>
           <input
@@ -128,14 +155,11 @@ export function Form() {
           </span>
         </button>
       </form>
-
-      <div className="contact__form__modal-success js-modal-form-success">
-        <button className="btn-modal-close">
-          <i className="ph-x-bold"></i>
-        </button>
-        <p>Seu formulario foi enviado com sucesso!</p>
-        <div className="progress-bar"></div>
-      </div>
+      <Modal
+        message={message}
+        open={modal}
+        type={formSuccess ? "success" : "error"}
+      />
     </div>
   );
 }

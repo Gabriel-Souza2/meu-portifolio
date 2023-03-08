@@ -32,7 +32,7 @@ export function Contacts() {
               onMouseLeave={handleHover}
             >
               <img src="./mail.png" />
-              <span>gabriel.souza2@hotmail.com.br</span>
+              <span>gabrielsouzadev@outlook.com</span>
             </button>
           </Tooltip.Trigger>
           <Tooltip.Portal>

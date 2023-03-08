@@ -1,0 +1,65 @@
+@import "../../styles/colors.scss";
+
+.modal {
+  width: 35rem;
+  height: 10rem;
+  background-color: $success;
+  color: $text-menu;
+  font-weight: bold;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  border-radius: 5px;
+
+  &--error {
+    background-color: $danger !important;
+  }
+
+  &.active {
+    display: flex;
+  }
+
+  .btn-modal-close {
+    background: transparent;
+    border: none;
+    border-radius: 9999px;
+    position: absolute;
+    color: $text-menu;
+
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $success-light;
+    }
+  }
+
+  .progress-bar {
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    border-radius: 5px;
+    animation: progressBar 3s ease-in;
+  }
+}
+
+@keyframes progressBar {
+  100% {
+    width: 100%;
+  }
+}
