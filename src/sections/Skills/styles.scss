@@ -5,19 +5,21 @@
   position: relative;
   overflow: hidden;
 
-  .skills__list-linguages {
-    height: 14rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: all 0.5s linear;
+  .skills__list {
     cursor: grab;
+    overflow: hidden;
 
-    &__item {
-      height: 100%;
-      position: relative;
-      margin-right: 2rem;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    margin-right: 3rem;
+
+    img {
+      pointer-events: none;
     }
   }
 }
