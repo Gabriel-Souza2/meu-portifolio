@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import "./styles.scss";
 
+import WhatsApp from "../../assets/whatsapp.svg";
+import Mail from "../../assets/mail.svg";
+
 export function Contacts() {
   const [copied, setCopied] = useState(false);
   function handleEmailCopy() {
@@ -19,7 +22,7 @@ export function Contacts() {
         href="https://api.whatsapp.com/send?phone=5511945146976"
         className="info"
       >
-        <img src="./whatsapp.png" />
+        <img src={WhatsApp} />
         <span>(11) 94514-6976</span>
       </a>
 
@@ -31,7 +34,7 @@ export function Contacts() {
               onClick={handleEmailCopy}
               onMouseLeave={handleHover}
             >
-              <img src="./mail.png" />
+              <img src={Mail} />
               <span>gabrielsouzadev@outlook.com</span>
             </button>
           </Tooltip.Trigger>

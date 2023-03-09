@@ -2,6 +2,10 @@ import { Contacts } from "../../components/Contacts";
 import { Form } from "../../components/Form";
 import "./styles.scss";
 
+import Github from "../../assets/github.svg";
+import Linkedin from "../../assets/linkedin.svg";
+import Instagram from "../../assets/instagram.svg";
+
 export function Contact() {
   return (
     <section id="contact" className="contact">
@@ -30,13 +34,13 @@ export function Contact() {
         <h3>Redes Sociais</h3>
         <div className="contact__social__links">
           <a target="_blank" href="https://www.instagram.com/gabrielgomes1061">
-            <img src="./instagram.png" />
+            <img src={Instagram} />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/gabrielsouza2/">
-            <img src="./linkedin.png" />
+            <img src={Linkedin} />
           </a>
           <a target="_blank" href="https://github.com/Gabriel-Souza2">
-            <img src="./github.png" />
+            <img src={Github} />
           </a>
         </div>
       </div>

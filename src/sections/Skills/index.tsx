@@ -1,44 +1,52 @@
-import { useEffect, useRef, useState } from "react";
-
 import "./styles.scss";
+
+import HTML from "../../assets/html.svg";
+import CSS from "../../assets/css.svg";
+import JS from "../../assets/js.svg";
+import SASS from "../../assets/sass.svg";
+import Typescript from "../../assets/typescript.svg";
+import React from "../../assets/react.svg";
+import PHP from "../../assets/php.svg";
+import Wordpress from "../../assets/wordpress.svg";
+import Figma from "../../assets/figma.svg";
 
 export function Skills() {
   const myLinguages = [
     {
       name: "HTML",
-      image: "/html.png",
+      image: HTML,
     },
     {
       name: "CSS",
-      image: "/css.png",
+      image: CSS,
     },
     {
       name: "SASS",
-      image: "/sass.png",
+      image: SASS,
     },
     {
       name: "JS",
-      image: "/js.png",
+      image: JS,
     },
     {
       name: "Typescript",
-      image: "/typescript.png",
+      image: Typescript,
     },
     {
       name: "react",
-      image: "/react.png",
+      image: React,
     },
     {
       name: "php",
-      image: "/php.png",
+      image: PHP,
     },
     {
       name: "WordPress",
-      image: "/wordpress.png",
+      image: Wordpress,
     },
     {
       name: "Figma",
-      image: "/figma.png",
+      image: Figma,
     },
   ];
 
