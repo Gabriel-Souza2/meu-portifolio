@@ -19,13 +19,16 @@ export function Carosel() {
         className="inner"
         drag="x"
         dragConstraints={{ right: 0, left: -width }}
+        whileTap={{
+          cursor: "grabbing",
+        }}
       >
         {projects.projects.map((project) => (
           <motion.div className="item" key={project.main_image}>
             <motion.div className="item__overlay">
               <h4>{project.name}</h4>
               <span>{project.description}</span>
-              <a href="#" className="btn-action">
+              <a href={project.link} className="btn-action">
                 Ver site
               </a>
             </motion.div>

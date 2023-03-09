@@ -3,23 +3,21 @@
     {
       "name": "Spotify Clone",
       "description": "Clone da pagina do spotify",
-      "main_image": "./spotify_1.png"
+      "main_image": "./spotify-clone.png",
+      "link": "https://gabriel-souza2.github.io/Spotify-Clone/"
     },
 
     {
       "name": "Formularios de Stickers",
       "description": "Desafio proposto para concorrer a uma vaga no Vagas.com",
-      "main_image": "./form_stickers.png"
+      "main_image": "./form_stickers.png",
+      "link": "https://gabriel-souza2.github.io/Form-Pacote-de-stickers/"
     },
     {
       "name": "Twitter Clone",
       "description": "Clone do Twitter",
-      "main_image": "./twitter.png"
-    },
-    {
-      "name": "DT Money",
-      "description": "Controle de gastos",
-      "main_image": "./dt_money.png"
+      "main_image": "./twitter.png",
+      "link": "https://gabriel-souza2.github.io/Twitter-Clone/"
     }
   ]
 }

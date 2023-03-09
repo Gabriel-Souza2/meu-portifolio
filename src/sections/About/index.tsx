@@ -1,8 +1,19 @@
 import "./styles.scss";
 
+import { motion } from "framer-motion";
+
 export function About() {
   return (
-    <section id="about" className="about">
+    <motion.section
+      animate={{ y: 0 }}
+      initial={{ y: 100 }}
+      transition={{
+        delay: 0.5,
+        duration: 0.5,
+      }}
+      id="about"
+      className="about"
+    >
       <h2 className="sections-title">Sobre Mim</h2>
       <div className="about__content">
         <div className="about__informations">
@@ -51,6 +62,6 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
