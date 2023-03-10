@@ -16,6 +16,7 @@
   margin-right: 5px;
   flex-direction: column;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     font-weight: bold;
