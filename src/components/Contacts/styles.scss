@@ -43,7 +43,7 @@ button.info {
   will-change: transform, opacity;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .contacts {
     flex-direction: column;
     gap: 4rem;
