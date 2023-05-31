@@ -18,6 +18,12 @@
       "description": "Clone do Twitter",
       "main_image": "./twitter.png",
       "link": "https://gabriel-souza2.github.io/Twitter-Clone/"
+    },
+    {
+      "name": "Desafio Front End Wine.com.br",
+      "description": "Desafio proposto pela Wine.com.br, onde teria que ser desenvolvido um ecommerce utilizando React, NextJS e Styled-Componets",
+      "main_image": "./wine.png",
+      "link": "https://challenge-wine-git-main-gabriel-souza2.vercel.app/vinhos"
     }
   ]
 }
