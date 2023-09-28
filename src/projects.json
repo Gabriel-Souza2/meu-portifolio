@@ -1,5 +1,17 @@
 {
   "projects": [
+     {
+      "name": "Landing Page Barbearia Estilo e Arte",
+      "description": "Landing Page Barbearia Estilo e Arte com sistema de agendamento feito em wordpress",
+      "main_image": "./estiloearte.png",
+      "link": "https://estiloearte.gabrielsouzadev.com/"
+    },
+         {
+      "name": "Landing Page Cliníca de Lentes de resina no dente",
+      "description": "Landing Page Cliníca de Lentes de resina no dente feito em wordpress",
+      "main_image": "./lentesderesina.png",
+      "link": "https://lentesderesina.gabrielsouzadev.com/"
+    },
     {
       "name": "Spotify Clone",
       "description": "Clone da pagina do spotify",
